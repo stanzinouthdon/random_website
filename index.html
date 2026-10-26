@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        section {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .image-gallery {
+            display: flex;
+            gap: 15px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .image-card {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+        .image-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        video {
+            width: 100%;
+            max-height: 450px;
+            border-radius: 6px;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HTTP Protocols & Media Test Page</h1>
+        <p>A simple Webpage with text, 3 images, and 1 video</p>
+    </header>
+
+    <!-- SECTION 1: HTTP TEXT CONTENT -->
+    <section>
+        <h2>Understanding HTTP (Hypertext Transfer Protocol)</h2>
+        <p>
+            <strong>HTTP</strong> is the foundational protocol used by the World Wide Web to transfer data between clients (such as web browsers) and servers. 
+            When a user requests a web page, the browser sends an HTTP <code>GET</code> request, and the server returns an HTTP response containing headers, status codes (like <code>200 OK</code>), and the requested resource body.
+        </p>
+        <p>
+            Key components of HTTP requests include:
+        </p>
+        <ul>
+            <li><strong>Headers:</strong> Metadata like <code>Content-Type</code>, <code>User-Agent</code>, and <code>Host</code>.</li>
+            <li><strong>Status Codes:</strong> <code>200 OK</code> (Success), <code>404 Not Found</code>, <code>500 Server Error</code>.</li>
+            <li><strong>Persistent vs Non-Persistent:</strong> Persistent HTTP reuses TCP connections for multiple media requests, whereas Non-Persistent opens a new connection per item.</li>
+        </ul>
+    </section>
+
+    <!-- SECTION 2: 3 IMAGES -->
+    <section>
+        <h2>Image Gallery (3 Images)</h2>
+        <div class="image-gallery">
+            <div class="image-card">
+                <img src="image1.png" alt="Mountain Landscape">
+                <p><strong>Image 1:</strong> Mountain View</p>
+            </div>
+            <div class="image-card">
+                <img src="image2.png" alt="River Valley">
+                <p><strong>Image 2:</strong> River Valley</p>
+            </div>
+            <div class="image-card">
+                <img src="image3.png" alt="Ocean Sunset">
+                <p><strong>Image 3:</strong> Ocean Waves</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: 1 VIDEO -->
+    <section>
+        <h2>Sample Video Stream (1 Video)</h2>
+        <video controls poster="https://picsum.photos/id/1024/800/450">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+</body>
+</html>
